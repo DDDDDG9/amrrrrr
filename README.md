@@ -1,2 +1,2 @@
 # amr-URDF
-clone repo to ws/src/<pkg name>/ DERRR
+clone repo to ws/src/<!--pkg name--!>/ DERRR
