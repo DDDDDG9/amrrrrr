@@ -17,6 +17,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(topic_based_ros2_control REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -32,9 +33,18 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+install(DIRECTORY description/
+  DESTINATION share/${PROJECT_NAME}/description
+)
+
 install(
-  DIRECTORY config description launch worlds
+  DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
 )
+
+install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
+)
+
 
 ament_package()
